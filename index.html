@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的黑黑 | 數位科技概論學習作品集</title>
+  <style>
+    /* 全局變數與粉白配色設定 */
+    :root {
+      --bg-color: #fdf7f9;        /* 柔和粉白背景 */
+      --card-bg: #ffffff;         /* 卡片純白背景 */
+      --primary-color: #d86a8a;   /* 質感乾燥玫瑰粉標題 */
+      --secondary-color: #f3e8ee; /* 淡粉色背景裝飾 */
+      --text-color: #333333;      /* 深灰文字，確保足夠對比度 */
+      --badge-bg: #e5989b;        /* 準備中標籤粉色 */
+      --border-color: #f0d8e2;    /* 淡粉邊框 */
+      --focus-color: #b5486d;     /* 鍵盤焦點深粉色 */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+
+    /* 頁首與頁內導覽 */
+    header {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 0 1rem 0;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 1rem;
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 0.75rem;
+    }
+
+    nav a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background-color: var(--secondary-color);
+    }
+
+    /* 鍵盤焦點清晰可見 */
+    a:focus {
+      outline: 3px solid var(--focus-color);
+      outline-offset: 2px;
+    }
+
+    /* 主要內容區塊 */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    section {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      color: var(--text-color);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p, ul {
+      margin-bottom: 0.75rem;
+    }
+
+    ul {
+      padding-left: 1.25rem;
+    }
+
+    /* 作品區與自適應網格排版 */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 600px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .project-card {
+      border: 1px dashed var(--border-color);
+      border-radius: 6px;
+      padding: 1rem;
+      background-color: var(--bg-color);
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: var(--badge-bg);
+      color: #ffffff;
+      font-size: 0.85rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    /* 頁尾 */
+    footer {
+      max-width: 800px;
+      margin: 2rem auto;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">關於我</a></li>
+        <li><a href="#projects">作品區</a></li>
+        <li><a href="#goals">學習目標</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 網站名稱與簡短介紹 -->
+    <section>
+      <h1>我的黑黑作品集</h1>
+      <p>歡迎來到我的個人學習網站！我是大一學生，這個網站用來展示我在數位科技概論課程中的學習成果。</p>
+    </section>
+
+    <!-- 關於我與學習興趣 -->
+    <section id="about">
+      <h2>關於我</h2>
+      <p><strong>顯示名稱：</strong>我的黑黑</p>
+      <p><strong>一句介紹：</strong>我有一隻黑貓，叫做黑黑。</p>
+      <p><strong>學習興趣：</strong></p>
+      <ul>
+        <li>網頁設計與粉白風格介面設計</li>
+        <li>數位內容創作與媒材整合</li>
+        <li>基礎程式邏輯與實作應用</li>
+      </ul>
+    </section>
+
+    <!-- 作品區 -->
+    <section id="projects">
+      <h2>作品區</h2>
+      <div class="portfolio-grid">
+        <div class="project-card">
+          <h3>期中作品</h3>
+          <p>個人作品集靜態網頁設計與 GitHub Pages 網站發布。</p>
+          <span class="badge">準備中</span>
+        </div>
+        <div class="project-card">
+          <h3>期末作品</h3>
+          <p>數位科技整合應用專案與互動網頁設計。</p>
+          <span class="badge">準備中</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 學習目標 -->
+    <section id="goals">
+      <h2>學習目標</h2>
+      <ul>
+        <li>熟練 HTML 與 CSS 基礎，能夠獨立完成排版整齊、具美感的自適應網頁。</li>
+        <li>掌握 GitHub Pages 的發布流程，建立屬於自己的線上作品集網站。</li>
+        <li>提升數位科技素養，並將學習成果運用在日常創作與專案中。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 我的黑黑. 版權所有.</p>
+  </footer>
+
+</body>
+</html>
